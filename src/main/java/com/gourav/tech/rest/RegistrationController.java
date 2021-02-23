@@ -1,6 +1,5 @@
 package com.gourav.tech.rest;
 
-import com.gourav.tech.entity.User;
 import com.gourav.tech.pojo.RegistrationRequest;
 import com.gourav.tech.service.RegistrationService;
 import com.gourav.tech.validation.ValidateRegisterRequest;
@@ -32,7 +31,7 @@ public class RegistrationController {
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody RegistrationRequest registrationRequest) {
-    //    logger.info(registrationRequest.toString());
+        //    logger.info(registrationRequest.toString());
 
         if (isBadRequest(registrationRequest)) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -53,9 +52,8 @@ public class RegistrationController {
     }
 
     @GetMapping("/registerGetAll")
-    public List<User> register() {
+    public List<RegistrationRequest> register() {
         return registrationService.getAll();
-
     }
 
 
@@ -75,7 +73,7 @@ public class RegistrationController {
             return true;
         }
 
-        if(null== registrationRequest.getDob()){
+        if (null == registrationRequest.getDob()) {
             logger.error("DOB is null");
             return true;
         }

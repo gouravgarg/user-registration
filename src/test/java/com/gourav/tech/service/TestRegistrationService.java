@@ -23,7 +23,6 @@ import java.time.LocalDate;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestRegistrationService {
 
-
     @Mock
     RegistrationRepository registrationRepository;
 

@@ -50,11 +50,14 @@ public class  RegistrationService {
         return registrationRepository.findByName(userName.trim());
     }
 
-    public List<User> getAll(){
+    public List<RegistrationRequest> getAll(){
         Iterable<User> users =  registrationRepository.findAll();
-        List<User> userList =new ArrayList<>();
-        users.iterator().forEachRemaining(userList::add);
-        return userList;
+        List<RegistrationRequest> registrationRequestList=new ArrayList<>();
+        for (User user: users) {
+            registrationRequestList.add(new RegistrationRequest(user.getUsername(),user.getDateOfBirth().toString(),user.getPaymentCardNumber()));
+        }
+
+        return registrationRequestList;
     }
 
 }

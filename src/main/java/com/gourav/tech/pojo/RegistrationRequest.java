@@ -10,6 +10,15 @@ public class RegistrationRequest {
     private String dob;
     private long paymentCardNumber;
 
+    public RegistrationRequest(String username, String dob, long paymentCardNumber) {
+        this.username = username;
+        this.dob = dob;
+        this.paymentCardNumber = paymentCardNumber;
+    }
+
+    public RegistrationRequest() {
+    }
+
     public String getUsername() {
         return username;
     }
@@ -53,5 +62,14 @@ public class RegistrationRequest {
     @Override
     public int hashCode() {
         return Objects.hash(username);
+    }
+
+    @Override
+    public String toString() {
+        return "RegistrationRequest{" +
+                "username='" + username + '\'' +
+                ", dob='" + dob + '\'' +
+                ", paymentCardNumber=" + paymentCardNumber +
+                '}';
     }
 }

@@ -35,6 +35,13 @@ public class User {
         return username;
     }
 
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public long getPaymentCardNumber() {
+        return paymentCardNumber;
+    }
 
     /**
      * Consider username only due to im memory map
