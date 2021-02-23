@@ -24,7 +24,7 @@ public class  RegistrationService {
 
     Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 
-    RegistrationRepository registrationRepository;
+    private RegistrationRepository registrationRepository;
 
     @Autowired
     public RegistrationService(RegistrationRepository registrationRepository) {

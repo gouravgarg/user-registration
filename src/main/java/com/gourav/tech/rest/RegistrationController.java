@@ -20,8 +20,8 @@ import java.util.List;
 public class RegistrationController {
 
     Logger logger = LoggerFactory.getLogger(RegistrationController.class);
-    ValidateRegisterRequest validateRegisterRequest;
-    RegistrationService registrationService;
+    private ValidateRegisterRequest validateRegisterRequest;
+    private RegistrationService registrationService;
 
     @Autowired
     public RegistrationController(ValidateRegisterRequest validateRegisterRequest, RegistrationService registrationService) {
