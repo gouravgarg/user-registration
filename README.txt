@@ -18,4 +18,15 @@
 	java -jar target/cashier-tech-1.0.0.RELEASE.jar
 
 
+Test with following cURL command:
+
+ curl -i -X POST \
+http://127.0.0.1:8080/register \
+-H 'Content-Type: application/json' \
+-d '{
+"username": "Gourav",
+"password": "Garg1234",
+"dob": "1980-02-21",
+"paymentCardNumber": "12345678912345678"
+}'
 
