@@ -1,4 +1,4 @@
-##Execution Instrucitons-  Following are the two ways to run "cashier-tech" either by Spring Boot or by Maven 
+##Execution Instrucitons-  Following are the two ways to run either by Spring Boot or by Maven 
 
 #1. By Spring-Boot	
 #Optional extra: with IIN
@@ -24,9 +24,9 @@ Test with following cURL command:
 http://127.0.0.1:8080/register \
 -H 'Content-Type: application/json' \
 -d '{
-"username": "Gourav",
+"username": "Sonu",
 "password": "Garg1234",
-"dob": "1980-02-21",
+"dob": "1992-05-12",
 "paymentCardNumber": "12345678912345678"
 }'
 
