@@ -1,17 +1,16 @@
-# Getting Started
+## Getting Started
 
 #### User Registration Restful API
 We would like you to develop a RESTful Web Service in Java. The goal of this exercise is to
 get an idea of the code you would produce if you were working at Gamesys, therefore your
 solution should be of production quality.
 
-Requirements:
-1. Must use Java.
-2. Should use a build & dependency management tool e.g. Maven or Gradle.
-3. We should be able to compile and run your tests e.g. mvn clean verify
-4. Please include instructions for running the application.
-#### Problem: Develop a Registration Service that implements a /register endpoint taking a JSON body.
-#### Required data & validation:
+#####Requirements:
+1. Build & dependency management tool e.g. Maven or Gradle.
+2. Able to compile and run tests e.g. mvn clean verify
+
+#### Registration Service that implements a /register endpoint taking a JSON body.
+#### Data & validation:
 * Username - alphanumeric, no spaces
 * Password – min length 4, at least one upper case letter & number
 * DoB (Date of Birth) - ISO 8601 format
