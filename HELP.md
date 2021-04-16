@@ -19,8 +19,7 @@ solution should be of production quality.
 * If the request body fails to conform to any of the basic validation checks return HTTP
 Status code: 400
 * Reject registrations if the user is under the age of 18 and return HTTP Status code: 403
-* If the username has already been used reject the request and return HTTP Status code:
-409
+* If the username has already been used reject the request and return HTTP Status code: 409
 * A successful registration should return HTTP Status code: 201
 #### Example request:
 curl -X POST \
@@ -37,12 +36,11 @@ On start-up allow a list of blocked payment issuer identification numbers to be 
 issuer identification number (IIN) is the first 6 digits of the payment card’s number. If the IIN
 is blocked registration should fail returning HTTP Status code: 406
 
-# Solution 
-Execution Instrucitons-  Following are the two ways to run "cashier-tech" either by Spring Boot or by Maven 
-
+## Solution 
+#####Execution Instructions-  Following are the two ways to run "cashier-tech" either by Spring Boot or by Maven 
 ### 1. By Spring-Boot	
 #### Optional extra: with IIN
-	mvn spring-boot:run -Dspring-boot.run.arguments=--iin.blockedSet=456789,987654
+    mvn spring-boot:run -Dspring-boot.run.arguments=--iin.blockedSet=456789,987654
 #####Optional extra: without IIN	
 	mvn spring-boot:run
 ### 2. By Maven
